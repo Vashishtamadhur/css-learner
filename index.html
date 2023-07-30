@@ -20,8 +20,10 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 650px;
+            height: 100%;
+            background-attachment: fixed;
             width: 100%;
+            overflow: hidden;
         }
 
         #h1{
@@ -38,13 +40,12 @@
             color: transparent;
             cursor: pointer;
             position: relative;
-            top: 140px;
-            right: 400px;
+            top: 120px;
+            right: 420px;
         }
 
         .h01{
             float: right;
-            display: inline-block;
             font-family: Bebas Neue;
             font-size: 30px;
             text-decoration: none;
@@ -143,15 +144,25 @@
         .home1{
             position: relative;
             left: 110px;
-            font-size: 35px;
+            font-size: 30px;
             color: rgb(255, 255, 255);
-            top: 120px;
+            top: 110px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .auto-type{
+            color: rgb(204, 204, 204);
+            position: relative;
+            top: 100px;
+            left: 130px;
+            font-size: 40px;
+            font-family: Amatic SC;
         }
     </style>
 </head>
 <body>
     <!-- This is a header -->
+    <div id="home1">
     <header>
         <div id="loc1">
             <span class="locicon1"><svg class="locicon1 xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -167,18 +178,35 @@
             <h1 class="h01"><a class="h01" href="">Sign Up</a></h1>
             <!-- They are links -->
             <ul id="H2">
-                <li class="h02"><a class="h002" href="#">Menu</a></li>
-                <li class="h02"><a class="h002" href="#">Book A Table</a></li>
-                <li class="h02"><a class="h002" href="#">Order Food</a></li>
+                <li class="h02"><a class="h002" href="menu.html">Menu</a></li>
+                <li class="h02"><a class="h002" href="contact.html">Contact Us</a></li>
+                <li class="h02"><a class="h002" href="orderecommerce.html">Order Food</a></li>
                 <li class="h02"><a class="h002" href="#">Careers</a></li>
             </ul>
         </nav>
     </header>
     <div id="home">
         <h1 id="h1">Hungry Point</h1>
+        <h2 id="h002"><span class="auto-type"></span></h2>
         <p class="home1">Best Restaurant or Cafe In Haryana...
         </p>
-        <p class="home1">Order Food Without Go Anywhere...</p>
+        <p class="home1">Order Food Without Go Anywhere...<br>On Doorstep...</p>
     </div>
+</div>
+    <div id="home2">
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ['Burger..', 'Pizza..', 'Italian..', 'North Indian..', 'Chinese..', 'Cakes..', 'Shakes..', 'Sandwich..', 'Ice Cream..'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        })
+    </script>
 </body>
 </html>
